@@ -77,7 +77,7 @@ async def start_message(c, m):
 
     await m.reply_text(
         f"<b>Hello ❣️{m.from_user.mention},\n\nI Acccept Join Requests Automatically
-Just ➕ Add Me To Your Channel ➕</b>",
+Just ➕ Add Me To Your Channel ➕.</b>",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆", url=f"https://telegram.me/QuickAcceptBot?startgroup=true&admin=invite_users"),
