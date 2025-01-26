@@ -76,8 +76,7 @@ async def start_message(c, m):
         return
 
     await m.reply_text(
-        f"<b> Hello ❣️{m.from_user.mention},
- I Acccept Join Requests Automatically
+        f"<b> Hello ❣️{m.from_user.mention},I Acccept Join Requests Automatically
 Just ➕ Add Me To Your Channel ➕ </b>",
         reply_markup=InlineKeyboardMarkup(
             [[
