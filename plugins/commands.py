@@ -76,7 +76,7 @@ async def start_message(c, m):
         return
 
     await m.reply_text(
-        f"<b>Hello ❣️{first}{last}{mention},\n\nɪ ᴀᴍ ᴀ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ ʙᴏᴛ. ɪ ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ ᴊᴏɪɴ ʀᴇQᴜᴇꜱᴛꜱ ɪɴꜱᴛᴀɴᴛʟʏ.\n\nꜱᴛᴇᴘꜱ:\n\nᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴛᴏʀ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴏʀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ꜱᴇᴛ ᴍᴇ ᴜᴘ!</b>",
+        f"<b>Hello ❣️{m.from_user.mention},\n\nɪ ᴀᴍ ᴀ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ ʙᴏᴛ. ɪ ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴏʀ ɢʀᴏᴜᴘ ᴊᴏɪɴ ʀᴇQᴜᴇꜱᴛꜱ ɪɴꜱᴛᴀɴᴛʟʏ.\n\nꜱᴛᴇᴘꜱ:\n\nᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴛᴏʀ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴏʀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ꜱᴇᴛ ᴍᴇ ᴜᴘ!</b>",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆", url=f"https://telegram.me/QuickAcceptBot?startgroup=true&admin=invite_users"),
@@ -182,7 +182,7 @@ async def approve_new(client, m):
             await client.send_message(LOG_CHANNEL, LOG_TEXT.format(m.from_user.id, m.from_user.mention))
         await client.approve_chat_join_request(m.chat.id, m.from_user.id)
         try:
-            await client.send_message(m.from_user.id, "<b>{first}{last}{mention},\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ 𝖳𝗈 𝖩𝗈𝗂𝗇 {} ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ.<b/>".format(m.from_user.mention, m.chat.title))
+            await client.send_message(m.from_user.id, "<b>{},\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ 𝖳𝗈 𝖩𝗈𝗂𝗇 {} ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ.<b/>".format(m.from_user.mention, m.chat.title))
         except:
             pass
     except Exception as e:
