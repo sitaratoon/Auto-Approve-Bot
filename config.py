@@ -4,7 +4,6 @@ API_ID = int(environ.get("API_ID", ""))
 API_HASH = environ.get("API_HASH", "")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
-AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", ""))
 ADMINS = int(environ.get("ADMINS", ""))
 
 # Warning - Give Db uri in deploy server environment variable, don't give in repo.
